@@ -1,0 +1,74 @@
+models/characters/marine/bodymarine_bright_mp
+{
+	noSelfShadow
+    unSmoothedTangents
+    materialType flesh
+      
+	renderbump  -size 1024 1024 -trace 0.07 -aa 2  models/characters/marine/body_local.tga work/models/characters/marines/nmbody_hi.lwo
+
+	diffusemap	models/characters/marine/mpmarine_bright_d.tga
+	bumpmap	addnormals ( models/characters/marine/body_local.tga, heightmap ( models/characters/marine/body_h.tga, 2 ))
+	specularmap	models/characters/marine/mpmarine_s.tga
+
+	{ 	blend add
+		map models/characters/marine/mpmarine_bright_glow.tga
+	}
+	
+	inlineGuide corpseBurnEffect(models/monsters/burnout.tga)
+
+}
+
+models/characters/marine/helmet_bright_mp
+{
+	noSelfShadow
+    unSmoothedTangents
+    materialType armor
+
+	renderbump  -size 512 512 -trace 0.09 -aa 2 -MergeHigh models/characters/marine/helmet_low_local.tga work/models/characters/marines_heads/helmet_hi.lwo
+
+		diffusemap	downsize( models/characters/marine/helmet_bright_d.tga, 1 )
+		bumpmap	addnormals ( models/characters/marine/helmet_local.tga, heightmap ( models/characters/marine/helmet_h.tga, 2 ))
+		specularmap	downsize( models/characters/marine/helmet_s.tga, 1 )
+
+	{ 	blend add
+		map models/characters/marine/helmet_bright_glow.tga
+	}
+	
+	{	
+		maskcolor				
+	    map	makealpha(models/characters/marine/helmet_mask.tga)
+	}
+
+	{
+	    blend GL_DST_ALPHA, gl_one
+	    maskalpha
+       	cubeMap		gfx/env/marhelmet
+        texgen		reflect
+		red   Parm0
+		green Parm1
+		blue  Parm2
+	}
+	
+	inlineGuide corpseBurnEffect(models/monsters/corpseburneffect_sm.tga)
+}
+
+models/monsters/tactical/tt_body_bright_mp
+{
+    noSelfShadow
+    unSmoothedTangents
+//   nonSolid
+    
+	renderbump  -size 1024 1024 -trace 0.05 -aa 2 -mergehigh models/monsters/tactical/tt_body_local.tga work/models/monsters/tactical/tt_body_high2b.lwo
+	materialImage	models/monsters/tactical/tt_body_hit
+		
+	diffusemap	downsize( models/monsters/tactical/tt_body_bright_d.tga, 1 )
+	bumpmap	addnormals ( models/monsters/tactical/tt_body_local.tga, heightmap ( models/monsters/tactical/tt_body_h.tga, 4 ))
+	specularmap	downsize( models/monsters/tactical/tt_body_s.tga, 1 )
+	
+	{ 	blend add
+		map models/monsters/tactical/tt_body_bright_glow.tga
+	}
+	
+	inlineGuide corpseBurnEffect(models/monsters/burnout_misc.tga)
+	
+}

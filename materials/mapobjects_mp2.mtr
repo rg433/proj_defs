@@ -1,0 +1,96 @@
+//-----------------------------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------------------------
+
+models/mapobjects/multiplayer/jump_pad/jump_pad_color
+{
+      	noselfShadow
+	unSmoothedTangents
+	nonSolid
+
+	diffusemap 	models/mapobjects/multiplayer/jump_pad/jump_pad_color_d.tga
+	bumpmap 	addnormals( models/mapobjects/multiplayer/jump_pad/jump_pad_local.tga, heightmap( models/mapobjects/multiplayer/jump_pad/jump_pad_h.tga, 2 ) )
+	specularmap	models/mapobjects/multiplayer/jump_pad/jump_pad_s.tga
+
+	{
+		blend add
+		map models/mapobjects/multiplayer/jump_pad/jump_pad_color_g.tga
+		red	0.5 * parm0 * (1 + sintable [time * 1] )
+		green	0.5 * parm1 * (1 + sintable [time * 1] )
+		blue	0.5 * parm2 * (1 + sintable [time * 1] )
+	}	
+	{
+		blend add
+		map models/mapobjects/multiplayer/jump_pad/jump_pad_color_g3.tga
+		colored
+	}
+	
+}	
+	
+
+models/mapobjects/multiplayer/jump_pad/jump_pad_color_glow
+{
+	translucent
+	nonSolid
+
+	{ 
+		maskColor
+		map makealpha(models/mapobjects/multiplayer/jump_pad/jump_pad_mask.tga)
+		centerScale .73, .73
+	}
+
+	{
+		blend GL_DST_ALPHA, gl_one
+		maskAlpha
+		map models/mapobjects/multiplayer/jump_pad/jump_pad_color_g2.tga
+		centerScale jumppadtable [time * 1], jumppadtable [time * 1]
+		clamp
+		colored
+	}	
+
+	
+}	
+
+
+
+//-----------------------------------------------------------------------------------------------
+
+models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_color
+{
+      	noselfShadow
+	unsmoothedtangents
+
+	renderbump  -size 512 512 -aa 2 -trace .05 -MergeHigh models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_local.tga work/models/mapobjects/multiplayer/acceleration_pad/pad_hi.lwo
+ 
+
+	diffusemap 	models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_color_d.tga
+	bumpmap		models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_local.tga
+	specularMap	models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_s.tga
+
+	{
+		blend add
+		map models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_color_g.tga
+		red	0.5 * parm0 * (1 + sintable [time * 1] )
+		green	0.5 * parm1 * (1 + sintable [time * 1] )
+		blue	0.5 * parm2 * (1 + sintable [time * 1] )
+	}	
+}		
+
+models/mapobjects/multiplayer/acceleration_pad/arrows_color
+{
+	translucent
+	nonSolid	
+	{ 
+		maskColor
+		map makealpha(models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_mask.tga)
+	}
+	{
+		blend GL_DST_ALPHA, gl_one
+		maskAlpha
+		map models/mapobjects/multiplayer/acceleration_pad/acceleration_pad_color_g2.tga
+		scroll 0, jumppadtable [0.25 + time * -1] - 0.2
+		clamp
+		colored
+	}
+}		
