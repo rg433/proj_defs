@@ -90,7 +90,7 @@ entityDef weapon_machinegun
 	"inv_start_ammo_machinegun"		"40"
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_machinegun.tga"
-	"inv_name"					"#str_107406"
+	"inv_name"					"Assault Rifle"
 
 	"fireRate"					".1"
 	"spread"					"2"
@@ -270,7 +270,7 @@ entityDef weaponmod_machinegun_ammo
 	"inv_ammo_machinegun"		"120"
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_machinegun.tga"
-	"inv_name"					"#str_107435"
+	"inv_name"					"Assault Rifle"
 
 	"model"						"models/items/ammo/ammo_box.lwo"
 }
