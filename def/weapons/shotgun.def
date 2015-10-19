@@ -93,7 +93,7 @@ entityDef weapon_shotgun
 	"def_hitscan"				"hitscan_shotgun_pellet"
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_shotgun"
 	"ammoType"				"ammo_shotgun"
-	"clipSize"				"8"
+	"clipSize"				"6"
 	"ammoRequired"				"1"
 	"gui"					"guis/weapons/shotgun_ammo.gui"
 	"mtr_icon"				"gfx/guis/hud/icons/gun_shotgun"
@@ -280,7 +280,7 @@ entityDef wpmod_shotgun_ammo
 {
 	"weapon"				"weapon_shotgun"
 	"mod_showsurface"		"models/weapons/shotgun/clip"
-	"clipSize"				"10"
+	"clipSize"				"6"
 }
 
 entityDef weaponmod_shotgun_ammo

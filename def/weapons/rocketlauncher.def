@@ -85,7 +85,7 @@ entityDef weapon_rocketlauncher
 	"weaponname"				"Rocket Launcher"
 	"def_projectile"			"projectile_rocket"
 	"ammoType"					"ammo_rocketlauncher"
-	"clipSize"					"1"
+	"clipSize"					"4"
 	"ammoRequired"				"1"
 	"gui"						"guis/weapons/rocketlauncher_ammo.gui"
 	"mtr_icon"					"gfx/guis/hud/icons/gun_rocketlauncher"
@@ -253,7 +253,7 @@ entityDef wpmod_rocketlauncher_burst
 	"lockSlowdown"			".25"
 	"lockAccelTime"			".5"
 
-	"clipSize"				"3"
+	"clipSize"				"4"
 	"fireRate"				".3"
 }
 
@@ -272,7 +272,7 @@ entityDef wpmod_rocketlauncher_homing
 	"lockSlowdown"			".25"
 	"lockAccelTime"			".5"
 
-	"clipSize"				"3"
+	"clipSize"				"4"
 	"fireRate"				".3"
 }
 

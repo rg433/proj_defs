@@ -101,12 +101,12 @@ entityDef weapon_gauntlet
 
 	// -------------------- Recoil and Muzzle Kick ---------------------------------------
 
-	"muzzle_kick_time"			"0.1"
-	"muzzle_kick_maxtime"		"0.2"
+	"muzzle_kick_time"			"1"
+	"muzzle_kick_maxtime"		"2"
 	"muzzle_kick_angles"		"-5 0 0"
 	"muzzle_kick_offset"		"2 0 0"
 
-	"recoilTime"				"100"
+	"recoilTime"				"1000"
 	"recoilAngles"				"-2 0 0"
 
 	// ---------------------------- Muzzle Flash ---------------------------------------
