@@ -1,0 +1,21 @@
+IT266 - Ricardo Guiotto Favero
+
+>>> Single Player Mod for Quake 4, based on Resident Evil games.
+
+1st assignment: third person camera
+- changed to third person using the source code.
+
+2nd assignment: weight system for the player
+- I created a maximum of 2 item spaces (I chose 2 to demonstrate it quickly)
+
+3rd assignment: 6 weapons mods
+I tried to make them look like Resident Evil.
+-Napalmgun: new name (Flamethrower), firerate and sound effects. 
+-Shotgun: new clipsize and sound effects.
+-Machinegun: new name (Assault Rifle) and sound effects.
+-Blaster: new name (Magnum Revolver), firerate, damage and sound effects. 
+-Rocket launcher: new sound effect.
+-Grenade launcher: new clipsize.
+
+4th assignment: Menu UI
+- changed the sound effects, background, logo and colors.
